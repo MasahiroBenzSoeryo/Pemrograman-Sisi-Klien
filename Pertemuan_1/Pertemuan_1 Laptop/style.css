@@ -1,0 +1,155 @@
+h2.title {
+    border-left: 8px solid blue;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: right;
+}
+
+header button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    background-color: blue;
+    padding: 20px;
+    width: 200px;
+}
+
+aside h1 {
+    font-size: 20px;
+    color: white;
+    border-left: 4px solid white;
+    padding: 5px;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin-bottom: 10px;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+aside nav ul li a:hover {
+    color: lightgray;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: lightgray;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.editBtn {
+    background-color: blue;
+    color: white;
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+}
+
+button:hover {
+    background-color: black;
+}
+
+header button:hover {
+    background-color: darkred;
+}
+
+.editBtn:hover {
+    background-color: darkblue;
+}
+
+.deleteBtn:hover {
+    background-color: darkred;
+}
+
+.modal, .confirm-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content, .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.modal input {
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px;
+}
+
+footer {
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}

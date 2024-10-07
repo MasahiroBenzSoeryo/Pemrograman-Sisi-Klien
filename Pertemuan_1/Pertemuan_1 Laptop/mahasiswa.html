@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Panel - Mahasiswa</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button>Log Out</button>
+        </header>
+
+        <div class="main">
+            <aside>
+                <h1>Admin Panel</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="mahasiswa.html">Mahasiswa</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="content">
+                <h2 class="title">Daftar Mahasiswa</h2>
+                <button id="addStudentBtn">Tambah Mahasiswa</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <tr>
+                            <td>1</td>
+                            <td>A11.2022.14001</td>
+                            <td>Muhammad Rusdiansyah</td>
+                            <td>
+                                <button class="editBtn">Edit</button>
+                                <button class="deleteBtn">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A11.2022.14002</td>
+                            <td>Faiz Putra</td>
+                            <td>
+                                <button class="editBtn">Edit</button>
+                                <button class="deleteBtn">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A11.2022.14003</td>
+                            <td>Fuad Xavier</td>
+                            <td>
+                                <button class="editBtn">Edit</button>
+                                <button class="deleteBtn">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            
+        <footer>
+            &copy; 2024 Admin
+        </footer>
+    </div>
+
+    <!-- Modal Form Tambah/Edit Mahasiswa -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Tambah Mahasiswa</h2>
+            <form id="studentForm">
+                <input type="hidden" id="studentIndex">
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" placeholder="Masukkan NIM">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" placeholder="Masukkan Nama">
+                <button type="submit">Simpan</button>
+                <button type="button" onclick="closeModal()">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Konfirmasi Hapus -->
+    <div class="confirm-popup" id="deleteConfirmPopup">
+        <div class="popup-content">
+            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+            <button id="confirmDeleteBtn">Ya, Hapus</button>
+            <button onclick="closeDeletePopup()">Batal</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
